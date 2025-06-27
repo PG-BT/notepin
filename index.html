@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotePin – Smart Notes for Every Site</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    nav { position: sticky; top: 0; background: white; padding: 1em; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1000; }
+    nav ul { display: flex; justify-content: center; gap: 2em; list-style: none; margin: 0; padding: 0; }
+    nav a { text-decoration: none; color: #4f46e5; font-weight: 600; }
+    nav a:hover { color: #4338ca; }
+    header { background: #4f46e5; color: white; padding: 3em 1em; text-align: center; }
+    header img { height: 48px; margin-bottom: 1em; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { margin-top: 0.6em; font-size: 1.2em; }
+    .cta-button { background: #10b981; color: white; border: none; padding: 0.9em 2em; font-size: 1em; border-radius: 8px; margin-top: 1.2em; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .cta-button:hover { background: #059669; }
+    section { padding: 3em 1em; max-width: 1000px; margin: auto; }
+    h2 { text-align: center; font-size: 2em; margin-bottom: 1em; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; }
+    .feature { background: white; padding: 1.5em; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .feature h3 { margin-top: 0; color: #4f46e5; }
+    table { width: 100%; margin-top: 2em; border-collapse: collapse; }
+    th, td { border: 1px solid #e5e7eb; padding: 1em; text-align: center; }
+    th { background: #4f46e5; color: white; }
+    .check { color: #10b981; font-weight: bold; }
+    .cross { color: #ef4444; font-weight: bold; }
+    footer { background: #111827; color: #e5e7eb; text-align: center; padding: 2em 1em; font-size: 0.9em; }
+    .faq { background: white; padding: 1em; border-radius: 8px; margin-bottom: 1em; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    .faq strong { display: block; margin-bottom: 0.4em; color: #4f46e5; }
+    .buy-button { background: #f97316; color: white; padding: 0.8em 1.5em; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1em; transition: background 0.2s; }
+    .buy-button:hover { background: #fb923c; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#comparison">Comparison</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <header id="install">
+    <img src="images/logo.png" alt="NotePin Logo">
+    <h1>NotePin</h1>
+    <p>Pin notes and todos directly to websites. Instantly. Organize your web like never before.</p>
+    <a href="#" class="cta-button">Install from Chrome Web Store</a>
+  </header>
+
+  <section id="features">
+    <h2>What Makes It Special?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>📌 Pin Notes to Any Page</h3>
+        <p>Quickly attach notes, todos or reminders to specific URLs.</p>
+      </div>
+      <div class="feature">
+        <h3>📝 Task Lists & Comments</h3>
+        <p>Create checklists and comment threads directly on your pins.</p>
+      </div>
+      <div class="feature">
+        <h3>📷 Screenshot Attachments</h3>
+        <p>Add screenshots to your notes for better visual context.</p>
+      </div>
+      <div class="feature">
+        <h3>🖼️ Visual Pinboard</h3>
+        <p>View and manage all your notes in one clean dashboard.</p>
+      </div>
+      <div class="feature">
+        <h3>🔒 Privacy by Design</h3>
+        <p>Data stored locally by default. Your notes stay yours.</p>
+      </div>
+      <div class="feature">
+        <h3>🌙 Dark Mode</h3>
+        <p>Optimized for day and night usage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <h2>Free vs Premium</h2>
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Free</th><th>Premium</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Number of Notes</td><td>10</td><td class="check">Unlimited</td></tr>
+        <tr><td>Screenshots</td><td class="cross">No</td><td class="check">Yes</td></tr>
+        <tr><td>Tasks & Comments</td><td class="check">Yes</td><td class="check">Yes</td></tr>
+        <tr><td>Cloud Sync</td><td class="cross">No</td><td class="check">Yes</td></tr>
+        <tr><td>Multi-device Access</td><td class="cross">No</td><td class="check">Yes</td></tr>
+        <tr><td>Backup & Restore</td><td class="cross">No</td><td class="check">Yes</td></tr>
+        <tr><td>Priority Support</td><td class="cross">No</td><td class="check">Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <p style="text-align:center;">Simple pricing. No subscriptions unless you want to.</p>
+    <table class="pricing-table" style="table-layout: fixed; width: 100%;">
+      <thead>
+        <tr>
+          <th style="width: 33%;">Monthly</th>
+          <th style="width: 33%;">Yearly</th>
+          <th style="width: 33%;">Lifetime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$2.50 / mo</td>
+          <td>$24 / yr</td>
+          <td>$39 once</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="text-align:center; margin-top: 1.5em;">
+      <a href="#" class="buy-button">Buy Premium</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <strong>Can I sync notes between devices?</strong>
+      <span>Yes, Premium includes cross-device sync via cloud.</span>
+    </div>
+    <div class="faq">
+      <strong>How is my data stored?</strong>
+      <span>All data is stored locally unless you opt-in to Premium sync.</span>
+    </div>
+    <div class="faq">
+      <strong>Can I try Premium features?</strong>
+      <span>Yes – you can test Premium free for 3 days.</span>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 NotePin – Made for smart web users. | <a href="mailto:pgbuilds.tech@gmail.com" style="color: #93c5fd;">Contact</a>
+  </footer>
+</body>
+</html>
