@@ -37,6 +37,11 @@
     footer {background:#0f172a;color:#cbd5e1;text-align:center;padding:2rem 1rem;font-size:0.9rem;}
     .faq-item {margin-bottom:1.5rem;}
     .faq-item strong {color:var(--accent);display:block;margin-bottom:0.3rem;}
+    .faq-question {background:none;border:none;color:var(--accent);font-weight:600;font-size:1rem;width:100%;text-align:left;padding:0.5rem 0;cursor:pointer;position:relative;}
+    .faq-question::after {content:"+";position:absolute;right:0;font-weight:bold;}
+    .faq-question.active::after {content:"–";}
+    .faq-answer {max-height:0;overflow:hidden;transition:max-height 0.3s ease;color:#334155;padding-left:0.5rem;}
+    .faq-question.active + .faq-answer {max-height:200px;margin-bottom:1rem;}
   </style>
 </head>
 <body>
@@ -86,17 +91,50 @@
     <div style="text-align:center;margin-top:1.5em;"><a href="#" class="buy-button">Get Premium</a><p style="margin-top:0.5em;font-size:0.9em;color:#6b7280;">3-day free trial included – cancel anytime</p></div>
   </section>
 
-  <section>
-    <h2 style="text-align:center;">FAQ</h2>
-    <div style="max-width:700px;margin:2rem auto;">
-      <div class="faq-item"><strong>Can I sync notes between devices?</strong><p>Yes, if you upgrade to Premium. It includes secure cloud sync.</p></div>
-      <div class="faq-item"><strong>What happens if I uninstall the extension?</strong><p>Your data remains safely stored locally or backed up (if Premium).</p></div>
-      <div class="faq-item"><strong>Do you offer a trial?</strong><p>Yes! You get 3 days free access to Premium features.</p></div>
+<section>
+  <h2 style="text-align:center;">FAQ</h2>
+  <div style="max-width:700px;margin:2rem auto;">
+    <div class="faq-item">
+      <button class="faq-question">Can I sync notes between devices?</button>
+      <div class="faq-answer">Currently not supported. But you can export/import data with Premium.</div>
     </div>
-  </section>
+    <div class="faq-item">
+      <button class="faq-question">What happens if I uninstall the extension?</button>
+      <div class="faq-answer">Your data stays safely stored in your browser, or backed up if you exported it.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer a trial?</button>
+      <div class="faq-answer">Yes! All Premium features are free for 3 days – cancel anytime.</div>
+    </div>
+  </div>
+</section>
 
+<section style="max-width:700px;margin:2rem auto;text-align:center;font-size:0.9rem;color:#64748b;">
+  <h2 style="font-size:1.2rem;color:#1e293b;margin-bottom:0.5em;">Privacy Policy</h2>
+  <p>NotePin does not collect any personal data or track your browsing activity.</p>
+  <p>All your notes are stored locally in your browser. If you choose to upgrade, export/import functionality allows secure manual backup.</p>
+  <p>We do not use analytics or third-party cookies.</p>
+  <p>Contact us anytime at <a href="mailto:pgbuilds.tech@gmail.com" style="color:#38bdf8;">pgbuilds.tech@gmail.com</a>.</p>
+</section>
+
+  
   <footer>
     © 2025 NotePin. Designed with precision for the modern web. | <a href="mailto:pgbuilds.tech@gmail.com" style="color:#38bdf8;">Contact</a>
   </footer>
+
+  <script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      if (btn.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
